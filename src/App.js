@@ -4,7 +4,7 @@ import Signup from './Pages/Signup'
 import Login from './Pages/Login'
 import { FirebaseContext } from './store/Context';
 // const { auth } = useContext(FirebaseContext);
-
+import Create from './Pages/Create'
 
 import { AuthContext } from './store/Context'
 import './App.css';
@@ -35,6 +35,9 @@ function App() {
         </Route>
         <Route path='/login' >
         <Login />
+        </Route>
+        <Route path='/create' >
+        <Create />
         </Route>
       
       </Router>
