@@ -8,6 +8,7 @@ import SellButton from '../../assets/SellButton';
 import SellButtonPlus from '../../assets/SellButtonPlus';
 import { AuthContext, FirebaseContext } from '../../store/Context';
 import {useHistory} from 'react-router-dom'
+import { auth } from '../../firebase/config';
 
 function Header() {
   const history = useHistory()
@@ -45,7 +46,7 @@ function Header() {
           
         </div>
         { user && <span onClick={()=>{
-          firebase.auth().signOut();
+          auth.signOut();
           history.push('/login')
         }}>Logout</span>}
 
